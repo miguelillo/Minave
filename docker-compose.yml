@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  minave.app:
+    image: ${DOCKER_REGISTRY-}minaveapp
+    build:
+      context: .
+      dockerfile: Minave.App/Dockerfile
+  minave.api:
+    image: ${DOCKER_REGISTRY-}minaveapi
+    build:
+      context: .
+      dockerfile: Minave.API/Dockerfile
