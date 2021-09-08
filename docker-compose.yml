@@ -5,9 +5,15 @@ services:
     image: ${DOCKER_REGISTRY-}minaveapp
     build:
       context: .
-      dockerfile: Minave.App/Dockerfile
+      dockerfile: Minave.App/ClientApp/Dockerfile
+    ports:
+       - "2000:3000"
+    restart: always
   minave.api:
     image: ${DOCKER_REGISTRY-}minaveapi
     build:
       context: .
       dockerfile: Minave.API/Dockerfile
+    ports:
+       - "1500:5000"
+    restart: always

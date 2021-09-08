@@ -1,0 +1,28 @@
+services:
+  minave.api:
+    build:
+      context: C:\Users\amara\source\repos\Minave
+      dockerfile: Minave.API/Dockerfile
+    image: minaveapi
+    ports:
+    - published: 1500
+      target: 5000
+    restart: always
+  minave.app:
+    build:
+      context: C:\Users\amara\source\repos\Minave
+      dockerfile: Minave.App/ClientApp/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: minaveapp
+    ports:
+    - target: 80
+    - target: 443
+    - published: 2000
+      target: 3000
+    restart: always
+    volumes:
+    - C:\Users\amara\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\amara\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
