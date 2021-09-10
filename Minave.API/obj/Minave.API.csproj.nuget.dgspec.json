@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amara\\source\\repos\\Minave\\Minave.API\\Minave.API.csproj": {}
+    "C:\\Projects\\Squad For Fun\\Minave\\Minave.API\\Minave.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amara\\source\\repos\\Minave\\Minave.API\\Minave.API.csproj": {
+    "C:\\Projects\\Squad For Fun\\Minave\\Minave.API\\Minave.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amara\\source\\repos\\Minave\\Minave.API\\Minave.API.csproj",
+        "projectUniqueName": "C:\\Projects\\Squad For Fun\\Minave\\Minave.API\\Minave.API.csproj",
         "projectName": "Minave.API",
-        "projectPath": "C:\\Users\\amara\\source\\repos\\Minave\\Minave.API\\Minave.API.csproj",
-        "packagesPath": "C:\\Users\\amara\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amara\\source\\repos\\Minave\\Minave.API\\obj\\",
+        "projectPath": "C:\\Projects\\Squad For Fun\\Minave\\Minave.API\\Minave.API.csproj",
+        "packagesPath": "C:\\Users\\miguelangel.navarro\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Squad For Fun\\Minave\\Minave.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\amara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\miguelangel.navarro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://lcrm4.pkgs.visualstudio.com/_packaging/LidlNugets/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
