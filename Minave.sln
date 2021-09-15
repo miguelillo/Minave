@@ -3,31 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Minave.App", "Minave.App\Minave.App.csproj", "{FF5305E4-A586-409B-A5C6-0284EF648D53}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minave.API", "Minave.API\Minave.API.csproj", "{BEB24081-5535-47AF-9683-F0D98F7D8D7B}"
-EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AE8E77BF-84ED-4DCC-B303-D314F3E6D741}"
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FF5305E4-A586-409B-A5C6-0284EF648D53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF5305E4-A586-409B-A5C6-0284EF648D53}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF5305E4-A586-409B-A5C6-0284EF648D53}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF5305E4-A586-409B-A5C6-0284EF648D53}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEB24081-5535-47AF-9683-F0D98F7D8D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEB24081-5535-47AF-9683-F0D98F7D8D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEB24081-5535-47AF-9683-F0D98F7D8D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEB24081-5535-47AF-9683-F0D98F7D8D7B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE8E77BF-84ED-4DCC-B303-D314F3E6D741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE8E77BF-84ED-4DCC-B303-D314F3E6D741}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE8E77BF-84ED-4DCC-B303-D314F3E6D741}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE8E77BF-84ED-4DCC-B303-D314F3E6D741}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
