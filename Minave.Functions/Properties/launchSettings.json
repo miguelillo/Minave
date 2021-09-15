@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Minave.Functions": {
+      "commandName": "Project",
+      "commandLineArgs": "host start --port 7073 --pause-on-error"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 34260,
+      "useSSL": false
+    }
+  }
+}
