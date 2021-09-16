@@ -12,7 +12,6 @@ RUN dotnet publish *.csproj --output /home/site/wwwroot
 
 
 FROM mcr.microsoft.com/azure-functions/dotnet:3.0
-EXPOSE 7073
 ENV AzureWebJobsScriptRoot=/home/site/wwwroot
 ENV AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 

@@ -1,4 +1,4 @@
-Commands:
+﻿Commands:
 
 ## Create a Docker network
 
@@ -39,8 +39,6 @@ RUN npm run-script build
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS final
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 RUN mkdir /app/wwwroot
 COPY --from=dotnet-publish /app/publish .
 COPY --from=node-builder /node/build ./wwwroot
@@ -57,6 +55,16 @@ docker build -t manavarro/minave.app:1.0 .
 ```
 docker run -itd -p 2000:80 --name minaveapp --network=squad-for-fun-network manavarro/minave.app:1.0
 ```
+
+6. Test if it works!
+
+```
+http://localhost:2000/
+```
+
+7. Try to Fetch Data ¿Kapaxao?
+
+We need the azure function ☢
 
 ## Dockerize Azure Function
 
@@ -79,7 +87,6 @@ RUN dotnet publish *.csproj --output /home/site/wwwroot
 
 
 FROM mcr.microsoft.com/azure-functions/dotnet:3.0
-EXPOSE 7073
 ENV AzureWebJobsScriptRoot=/home/site/wwwroot
 ENV AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 
@@ -95,3 +102,9 @@ docker build -t manavarro/minave.functions:1.0 .
 5. Finally, Run it
 ```sh
 docker run -itd -p 1500:80  --name minavefunctions --network=squad-for-fun-network manavarro/minave.functions:1.0
+
+6. Test if it works!
+
+```
+http://localhost:1500/api/weatherforecastcalc
+```

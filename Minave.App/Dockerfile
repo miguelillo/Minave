@@ -17,8 +17,6 @@ RUN npm run-script build
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS final
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 RUN mkdir /app/wwwroot
 COPY --from=dotnet-publish /app/publish .
 COPY --from=node-builder /node/build ./wwwroot
