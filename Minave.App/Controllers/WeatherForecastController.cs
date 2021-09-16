@@ -31,11 +31,11 @@ namespace Minave.App.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-
                 string responseJson = await response.Content.ReadAsStringAsync();
-                var weatherForecastList = JsonSerializer.Deserialize<IEnumerable<WeatherForecast>>(responseJson);
+                var weatherForecastList = JsonSerializer.Deserialize<IEnumerable<WeatherForecast>>(responseJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
                 return weatherForecastList;
             }
+
             return Enumerable.Empty<WeatherForecast>();
         }
     }

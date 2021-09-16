@@ -25,13 +25,13 @@ namespace Minave.Functions
             log.LogInformation("C# HTTP trigger function processed a request.");
 
             var rng = new Random();
+
             var result = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+            }).ToArray();
 
             return new OkObjectResult(result);
         }
