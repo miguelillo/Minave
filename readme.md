@@ -85,7 +85,6 @@ RUN dotnet build "Minave.Functions.csproj" -c Release -o /app/build
 
 RUN dotnet publish *.csproj --output /home/site/wwwroot
 
-
 FROM mcr.microsoft.com/azure-functions/dotnet:3.0
 ENV AzureWebJobsScriptRoot=/home/site/wwwroot
 ENV AzureFunctionsJobHost__Logging__Console__IsEnabled=true
@@ -108,3 +107,9 @@ docker run -itd -p 1500:80  --name minavefunctions --network=squad-for-fun-netwo
 ```sh
 http://localhost:1500/api/weatherforecastcalc
 ```
+
+## Test Dockerized APP and Dockerized Function together!
+
+1. Fetch data from : http://localhost:2000/
+
+2. Go to Docker Desktop and see Function logs
