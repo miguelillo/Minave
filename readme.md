@@ -4,7 +4,7 @@ Commands:
 
 As we want to connect two containers, it is necessary to create a network, so that both containers have connection between them.
 
-![alt text](http://url/to/img.png)
+![alt text](https://raw.githubusercontent.com/miguelillo/Minave/Squad-For-Fun-Resolve/Docker%20network.png)
 
 ```
 docker network create -d bridge squad-for-fun-network
