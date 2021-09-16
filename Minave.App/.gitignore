@@ -28,6 +28,7 @@ Obj/
 .vs/
 /wwwroot/dist/
 *.vs*
+*/.vs
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
