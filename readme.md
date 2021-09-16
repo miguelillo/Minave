@@ -102,9 +102,9 @@ docker build -t manavarro/minave.functions:1.0 .
 5. Finally, Run it
 ```sh
 docker run -itd -p 1500:80  --name minavefunctions --network=squad-for-fun-network manavarro/minave.functions:1.0
-
+```
 6. Test if it works!
 
-```
+```sh
 http://localhost:1500/api/weatherforecastcalc
 ```
