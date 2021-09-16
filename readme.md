@@ -58,13 +58,40 @@ docker build -t manavarro/minave.app:1.0 .
 docker run -itd -p 2000:80 --name minaveapp --network=squad-for-fun-network manavarro/minave.app:1.0
 ```
 
+## Dockerize Azure Function
+
+1. First of all, get noticed that we have an functions folder
+
+2. Open the terminal and go to the inside functions
+
+3. Now, we can create a Dockerfile:
+
+```
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS installer
+
+COPY . /src/dotnet-function-app
+WORKDIR /src/dotnet-function-app
+RUN mkdir -p /home/site/wwwroot
+RUN dotnet restore "Minave.Functions.csproj"
+RUN dotnet build "Minave.Functions.csproj" -c Release -o /app/build
+
+RUN dotnet publish *.csproj --output /home/site/wwwroot
 
 
+FROM mcr.microsoft.com/azure-functions/dotnet:3.0
+EXPOSE 7073
+ENV AzureWebJobsScriptRoot=/home/site/wwwroot
+ENV AzureFunctionsJobHost__Logging__Console__IsEnabled=true
 
-docker build -t manavarro/minave.app:1.0 .
+COPY --from=installer ["/home/site/wwwroot", "/home/site/wwwroot"]
+```
 
-docker run -itd -p 2000:80 --name minaveapp --network=squad-for-fun-network manavarro/minave.app:1.0
 
+4. Go to the console and build it
+```sh
 docker build -t manavarro/minave.functions:1.0 .
+```
 
+5. Finally, Run it
+```sh
 docker run -itd -p 1500:80  --name minavefunctions --network=squad-for-fun-network manavarro/minave.functions:1.0
