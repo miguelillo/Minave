@@ -1,3 +1,4 @@
+#SQUAD FOR FUN
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS dotnet-build
 WORKDIR /src
 COPY . /src
