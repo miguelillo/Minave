@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  minave.app:
+    build: Minave.App
+    container_name: minaveapp
+    domainname: minaveapp
+    ports:
+      - 2000:80
+    networks:
+      - squad-for-fun-network
+          # ipv4_address: 172.16.238.10 
+
+  minave.functions:
+    build: Minave.Functions
+    container_name: minavefunctions
+    domainname: minavefunctions
+    ports:
+      - 1500:80
+    networks:
+      - squad-for-fun-network
+          #  ipv4_address: 172.16.238.11
+volumes:
+  www:
+  
+networks:
+  squad-for-fun-network:
+    driver: bridge
+    # driver_opts:
+    #   com.docker.network.enable_ipv6: "true"
+    # ipam:
+    #   driver: default
+    #   config:
+    #     - subnet: 172.16.238.0/24
+    #     gateway: 172.16.238.1
+    #     - subnet: "2001:3984:3989::/64"
+    #     gateway: "2001:3984:3989::1"
